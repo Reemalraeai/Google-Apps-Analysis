@@ -14,8 +14,6 @@ https://www.kaggle.com/lava18/google-play-store-apps
 
 
 
-
-
 ## PORJECT PROCESS
 
 Importing & Exploring:
@@ -52,7 +50,9 @@ Inspecting the outliers value by calling google_data[google_data.Rating > 5]  an
 
 Create a threshold to help in dropping 90% empty rows, and use the variable to drop the 90% empty rows 
 
-'''threshold = len(google_data)*0.1 #10% of the rows (10840)'''
+```
+threshold = len(google_data)*0.1 #10% of the rows (10840)
+```
 
 
 Data Imputation & Manipulation 
@@ -85,11 +85,13 @@ Data Visualization
 The point is to visualize & analyze rating, price, reviews, and installs against their respective categories. To do so, we need to group by category and aggregate the values by mean for Rating, Reviews, & Installs and by sum for Price.
 
 
-'''grp = google_data.groupby('Category')
+```
+grp = google_data.groupby('Category')
 Rating = grp['Rating'].agg(np.mean)
 Price = grp['Price'].agg(np.sum)
 Reviews = grp['Reviews'].agg(np.mean)
-Installs = grp["Installs"].agg(np.mean)'''
+Installs = grp["Installs"].agg(np.mean)
+```
 
 After grouping, each variable was plotted against the respective category as it is shown below
 
@@ -103,8 +105,11 @@ RESULTS
 According to the analysis: 
 
 Education & Event categories have the highest rating and Dating category has the lowest rating.
+
 Finance, Family, Lifestyle, and Medical Categories score the highest in terms of price respectively.
+
 Communication, Social & Game categories score the highest number of reviews.
+
 Communication category has the highest number of installs.
 
 
