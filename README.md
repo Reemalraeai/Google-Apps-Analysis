@@ -1,7 +1,7 @@
 # Google Apps Analysis
 
 
-PROJECT DESCRIPTION 
+## PROJECT DESCRIPTION 
 
 Project Purpose:
 Analyzing Google Apps’ Rating, Price, Reviews, installs against their respective categories, and they are: art and design, auto and vehicles, beauty, books and reference, business, comics, communication, dating, education, entertainment, events, finance, food and drink, health and fitness, house and home, libraries and demo, lifestyle, game, family, medical, social, shopping, photography, sports, travel and local, tools, personalization, productivity, parenting, weather, video players,  news and magazines, maps and navigation.
