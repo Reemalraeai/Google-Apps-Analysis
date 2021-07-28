@@ -34,7 +34,9 @@ Importing & Exploring:
 
 As it is shown in the boxplot, there is an outlier value reflects a rating score approximately equals to 19, and this rating score is not true (Rating score in this case is from 0 to 5)
 
-
+                         
+                                  
+                                   
 Data Cleaning 
 
 1-	Inspecting Outliers 
