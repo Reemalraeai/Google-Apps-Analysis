@@ -14,6 +14,8 @@ https://www.kaggle.com/lava18/google-play-store-apps
 
 
 
+
+
 PORJECT PROCESS
 
 Importing & Exploring:
@@ -36,6 +38,7 @@ As it is shown in the boxplot, there is an outlier value reflects a rating score
 Data Cleaning 
 
 1-	Inspecting Outliers 
+
 Inspecting the outliers value by calling google_data[google_data.Rating > 5]  and droping the outliers
 
 ![Boxplot 2](https://user-images.githubusercontent.com/71211875/127317874-aa509c2d-c68b-4b46-a92f-007d796b94b0.GIF)
@@ -53,6 +56,7 @@ Create a threshold to help in dropping 90% empty rows, and use the variable to d
 Data Imputation & Manipulation 
 
 1-	Filling the Missing Values in Rating Column 
+
 Define a function that will impute median for the missing values and then apply it to Rating column 
 
 '''def impute_median(series):
@@ -60,13 +64,18 @@ Define a function that will impute median for the missing values and then apply 
     
     
 2-	Filling the Missing Values of the Categorical Type Column
+
 Fill the missing values in Type, Current Ver, Andorid Ver Columns (because they are categorical) with mode
 
 
 3-	Converting Columns into Numerical Values
 
 Convert Price, Reviews, and Installs columns into numerical values 
+
 After finishing the imputation and manipulation, take a look at the dataset using head() & describe()
+
+
+
 
 
 Data Visualization 
@@ -88,7 +97,9 @@ After grouping, each variable was plotted against the respective category as it 
 ![Category wise Reviews](https://user-images.githubusercontent.com/71211875/127318138-77869ba9-2e45-4d24-9c2a-95c275af0e53.GIF)
 
 RESULTS
+
 According to the analysis: 
+
 Education & Event categories have the highest rating and Dating category has the lowest rating.
 Finance, Family, Lifestyle, and Medical Categories score the highest in terms of price respectively.
 Communication, Social & Game categories score the highest number of reviews.
