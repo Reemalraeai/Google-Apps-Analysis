@@ -8,12 +8,16 @@ Analyzing Google Apps’ Rating, Price, Reviews, installs against their respecti
 
 
 Data Source:
+
 Google Play Store Apps
 https://www.kaggle.com/lava18/google-play-store-apps 
+
+
 
 PORJECT PROCESS
 
 Importing & Exploring:
+
 -	Import suicide rates dataset
 -	Explore the dataset
    o	see the first 5 rows (head())
@@ -30,6 +34,7 @@ As it is shown in the boxplot, there is an outlier value reflects a rating score
 
 
 Data Cleaning 
+
 1-	Inspecting Outliers 
 Inspecting the outliers value by calling google_data[google_data.Rating > 5]  and droping the outliers
 
@@ -38,7 +43,8 @@ Inspecting the outliers value by calling google_data[google_data.Rating > 5]  an
 ![Hist 2 with Comment](https://user-images.githubusercontent.com/71211875/127317889-e4c64082-f989-4e6e-a7da-60e4cf11e099.GIF)
 
 
-2-	Removing 90% Empty Rows  
+2-	Removing 90% Empty Rows 
+
 Create a threshold to help in dropping 90% empty rows, and use the variable to drop the 90% empty rows 
 
 '''threshold = len(google_data)*0.1 #10% of the rows (10840)'''
@@ -47,15 +53,15 @@ Create a threshold to help in dropping 90% empty rows, and use the variable to d
 Data Imputation & Manipulation 
 
 1-	Filling the Missing Values in Rating Column 
-
 Define a function that will impute median for the missing values and then apply it to Rating column 
 
 '''def impute_median(series):
     return series.fillna(series.median()) '''
     
+    
 2-	Filling the Missing Values of the Categorical Type Column
-
 Fill the missing values in Type, Current Ver, Andorid Ver Columns (because they are categorical) with mode
+
 
 3-	Converting Columns into Numerical Values
 
